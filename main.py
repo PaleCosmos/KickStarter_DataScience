@@ -27,9 +27,9 @@ DataFrame, Categorical_Data = load_data()
 
 #Data Preprocessing
 one_hot_encoding = pd.get_dummies(DataFrame[['category','main_category','currency','state','country']],drop_first=True) #one_hot_encdoing (Only categorical attribute)
-
+one_hot_encoding.to_csv("One_Hot_Encoding.csv")
 
 train_set, test_set= split_train_test(DataFrame,0.25)
 
 DataFrame.plot(kind="scatter",x="usd pledged",y="usd_pledged_real")
-plt.show()
+#plt.show()
