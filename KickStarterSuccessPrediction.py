@@ -65,7 +65,7 @@ def load_data(INPUT):
 
 #Load Data
 data = load_data(FILE_INPUT)
-# data = data.loc[:10000, :]
+data = data.loc[:10000, :]
 data.head()
 
 #Define Class
